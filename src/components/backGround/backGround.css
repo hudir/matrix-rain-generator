@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.backGround {
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    color: #5e5;
+
+    position: absolute;
+    z-index: 3;
+    display: flex;
+    flex-flow: nowrap row;
+    overflow: hidden;
+    position: absolute;
+    z-index: -100;
+}
+
+.backGround p {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    text-align: left;
+     width: 1%;
+    max-height: 100vh;
+    font-size: 18px;
+    /* // font-weight: 600; */
+    /* // text-shadow: 0 -0.04em #1dcf1d; */
+
+    position: relative;
+    top: -200vh;  
+
+   
+}
+
+.linear {
+    background: linear-gradient(rgba(0, 120, 0, 0) ,rgb(0,250,0) 62%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+}
+
+/*  @for $divNr from 1 to 100 {
+    p:nth-of-type(#{$divNr}) {
+         animation: fall ((random(3000)+7000) + ms) ((random(5000)+ 1000) + ms) infinite;
+         opacity: ((random(10) +90 ) / 100 );     
+     }
+ }  */
+
+@keyframes fall {
+    0% {
+        top: -200vh;
+        opacity: 1;
+    }
+    100% {
+        top: calc(130vh);
+        opacity: 0.2;
+    }
+}
+
+.pingFeng {
+    width: 100vw;
+    height: 100vh;
+}

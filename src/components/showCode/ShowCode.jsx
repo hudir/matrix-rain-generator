@@ -9,11 +9,11 @@ export default function ShowCode() {
     <div className='code'>
         <h1>add these code to component</h1>
     <pre>{`
-import {useEffect, useReducer, useState } from "react";
+import {useEffect, useState } from "react";
 
 export default function MRain() {
     const [rain, setRain] = useState(null)
-    [ani, setAni] =useState({
+    ,[ani, setAni] =useState({
         randomNum:function(max,min=0){return Math.floor(Math.random()*(max-min))+min},
         durationBasic:${ani.durationBasic},
         durationRandom:${ani.durationRandom},
@@ -62,9 +62,9 @@ export default function MRain() {
  return(
     <div className="mRain">
         {rain && rain.map((x,i)=> (
-            <p key={i} className={ani.linear && "linear"} style={
+            <p key={i} className={ani.linear ? "linear" : ''} style={
              {
-                animation:"fall \`\${(ani.randomNum(ani.durationRandom)+ani.durationBasic) + 'ms'} \${(ani.randomNum(ani.delayRandom)+ ani.delayBasic) + 'ms'} infinite\`, opacity: \`\${(ani.randomNum(ani.opacityRandom) + ani.opacityBasic ) / 100 }\`
+                animation:\`fall \${(ani.randomNum(ani.durationRandom)+ani.durationBasic) + 'ms'} \${(ani.randomNum(ani.delayRandom)+ ani.delayBasic) + 'ms'} infinite\`, opacity: \`\${(ani.randomNum(ani.opacityRandom) + ani.opacityBasic ) / 100 }\`
               } 
         }>{x}</p>
        ))}
@@ -78,7 +78,30 @@ export default function MRain() {
  <h1>add these code to css</h1>
 
  <pre>{`
- @keyframes fall {
+ .mRain {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    color: #5e5;
+    display: flex;
+    overflow: hidden;
+  }
+  
+  .mRain p {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    text-align: right;
+    width: 1%;
+    max-height: 100vh;
+    font-size: 18px;
+    position: relative;
+     top: -200vh;   
+  }
+  
+  @keyframes fall {
     0% {
         top: -200vh;
         opacity: 1;
@@ -87,34 +110,13 @@ export default function MRain() {
         top: calc(130vh);
         opacity: 0.2;
     }
-}
-
-.linear {
+  }
+  
+  .linear {
     background: linear-gradient(rgba(0, 120, 0, 0) ,rgb(0,250,0) 62%);
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    
-}
-.mRain {
-    margin: 0,
-    padding: 0,
-    boxSizing: "border-box",
-    width: "100vw",
-    height: "100vh",
-    backgroundColor: "#000",
-    color: "#5e5",
-}
-
-.mRain p {
-    writing-mode: vertical-rl;
-    text-orientation: upright;
-    text-align: left;
-     width: 1%;
-    max-height: 100vh;
-    font-size: 18px;
-    position: relative;
-    top: -200vh;  
-}
+  }
  `}</pre>
 
     </div>

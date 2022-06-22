@@ -3,3 +3,9 @@ div.code {
     overflow: scroll;
     display: block;
 }
+
+.code pre {
+    background-color: #bbb;
+    border-radius: 15px;
+    margin: 15px;
+}

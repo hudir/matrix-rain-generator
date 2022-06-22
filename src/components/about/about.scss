@@ -1,0 +1,37 @@
+div.about {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        width: 30%;
+        height: 50%;
+        object-fit: cover;
+    }
+    
+    .cards {
+        margin: 20px 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+
+        .card{
+            width: 150px;
+            line-height: 45px;
+            border: 1px solid;
+            background-color: black;
+            color: lightgreen;
+            font-weight: bold;
+            margin: 10px;
+            text-align: center;
+        }
+    }
+
+    .link a{
+       color: black; 
+       font-size: 50px;
+       display: inline-block;
+       margin: 10px 20px;
+    }
+
+}

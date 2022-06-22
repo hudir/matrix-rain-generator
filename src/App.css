@@ -37,7 +37,15 @@
   }
 }
 
-input:focus {
-   outline: none;
-   border: none;
+input:focus,textarea:focus {
+  outline-style: none;
+  box-shadow: none;
+  border: none;
+  
+  opacity: 0.9;
+}
+input,textarea{
+  outline-style: none;
+  box-shadow: none;
+  border: none;
 }

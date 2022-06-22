@@ -2,11 +2,16 @@
     position: absolute;
     top: -3vh;
     color: aliceblue;
-    left: 36vw;
+    left: 50%;
+    transform: translateX(-50%);
     color: #5e5;
 
     h1{
         font-size: 3rem;
     }
     
+}
+
+.side:hover {
+    cursor: pointer;
 }

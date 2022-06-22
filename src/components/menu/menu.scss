@@ -1,7 +1,8 @@
 nav {
     position: absolute;
     top: 90vh;
-    left: 33vw;
+    left: 50%;
+    transform: translateX(-50%);
 
     * {
         display: inline-block;
@@ -9,5 +10,16 @@ nav {
         color: #5e5;
         font-size: 2rem;
         text-decoration: none;
+        font-weight: bold;
+    }
+    .activ {
+        color: yellow;
+    }
+
+    small {
+        font-size: 1rem;
+        font-weight: 400;
+        margin-top: 20px;
     }
 }
+

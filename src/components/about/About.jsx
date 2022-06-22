@@ -1,9 +1,14 @@
 import React from 'react'
+import { useEffect } from 'react'
+import { useContext } from 'react'
 import {SiGithub,SiLinkedin} from 'react-icons/si'
 import myPhoto from "../../store/myPhoto.jpeg"
+import Store from '../../store/store'
 import "./about.scss"
 
 export default function About() {
+  const {setCurrentPage} = useContext(Store);
+  useEffect(()=>setCurrentPage('about'),[])
   return (
     <div className='about'>
       <h1>Zhuo Yang</h1>

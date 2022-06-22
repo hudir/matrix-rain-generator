@@ -16,7 +16,7 @@ const init = {
     delayRandom:5000,
     opacityBasic:90,
     opacityRandom:10,
-    linear:false,
+    linear:true,
     rain: true,
     value:500
 };
@@ -65,6 +65,11 @@ const init = {
         case "LINEA":
             return {...prevAni,linear: !prevAni.linear}
 
+        case "PAGE":
+            if (action.currentPage==='contact' || action.currentPage==='about'){
+                return {...prevAni, rain:false}
+            } else return {...prevAni, rain:true}
+
         default:
             return prevAni
     }
@@ -80,9 +85,16 @@ export function StoreProvider({children}){
     // letters store
     , [storeA, setStoreA] = useState(letterEng)
     , [storeB, setStoreB] = useState(langTingXu)
-    , [maxLettersSingleRain, setMaxLettersSingleRain] = useState('180')
+    , [maxLettersSingleRain, setMaxLettersSingleRain] = useState('80')
     , [lettersFromStroeA,setLettersFromStroeA] = useState('10')
     , [howHeavy, setHowHeavy] = useState(100)
+    , [currentPage, setCurrentPage] = useState('')
+    , [submit, setSubmit]= useState(null)
+
+    useEffect(()=>dispatch({
+        type:"PAGE",
+        currentPage:currentPage
+    }),[currentPage])
 
     useEffect(()=>{
        
@@ -127,6 +139,8 @@ export function StoreProvider({children}){
         ,lettersFromStroeA,setLettersFromStroeA
         ,howHeavy, setHowHeavy
         ,ani, dispatch
+        ,currentPage, setCurrentPage
+        ,submit, setSubmit
     }}>{children}</Store.Provider> )
 }
 

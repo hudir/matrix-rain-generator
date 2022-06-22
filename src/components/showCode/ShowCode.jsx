@@ -1,10 +1,11 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import { useContext } from 'react'
 import Store from '../../store/store'
 import "./showCode.scss"
 
 export default function ShowCode() {
-    const {storeA,storeB,maxLettersSingleRain,lettersFromStroeA,howHeavy, ani} =useContext(Store)
+    const {storeA,storeB,maxLettersSingleRain,lettersFromStroeA,howHeavy, ani,setCurrentPage} =useContext(Store)
+    useEffect(()=>setCurrentPage('code'),[])
   return (
     <div className='code'>
         <h1>add these code to component</h1>

@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import Store from '../../store/store'
 import {FiPlus,FiMinus} from 'react-icons/fi'
 import "./setting.scss"
+import { useEffect } from 'react'
 
 export default function Setting() {
     const {storeA , storeB, setStoreA, setStoreB
@@ -9,7 +10,10 @@ export default function Setting() {
         ,lettersFromStroeA,setLettersFromStroeA
         ,howHeavy, setHowHeavy
         ,ani, dispatch
+        ,setCurrentPage
       } = useContext(Store)
+
+    useEffect(()=>setCurrentPage('setting'),[])
   return (
     <div className='setting'>  
      

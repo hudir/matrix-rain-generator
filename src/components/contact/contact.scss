@@ -1,0 +1,51 @@
+form.contact {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+
+    div.formContainer{
+        margin: 0;
+        width: 65%;
+        text-align: center;
+        max-height: fit-content;
+        height: 90px;
+        
+
+        input {
+            width: 100%;
+            line-height: 2rem;
+            height: fit-content;
+            margin: 0;
+            font-size: 1rem; 
+        }
+        
+        textarea{
+            width: 100%;
+            line-height: 2rem;
+            height: 4rem;
+            font-size: 1rem;
+        }
+        
+        label {
+            border: none;
+        } 
+
+        input:focus, textarea:focus {
+            outline: none;
+            border: none;
+            
+ 
+        }
+    }
+
+    button {
+        margin: 2rem;
+        padding: 0.5rem 1.5rem;
+        font-size: 2rem;
+        border: none;
+        background-color: gray;
+        color: lightgreen;
+        opacity: 1;
+    }
+}

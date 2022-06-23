@@ -1,6 +1,6 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom';
-import Sidebar from '../../sidebar/Sidebar';
+import Sidebar from '../sidebar/Sidebar';
 import About from '../about/About';
 import BackGround from '../backGround/BackGround'
 import Contact from '../contact/Contact';

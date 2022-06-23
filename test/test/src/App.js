@@ -1,16 +1,17 @@
 import "./App.css"
+
 import {useEffect, useState } from "react";
 
 export default function MRain() {
     const [rain, setRain] = useState(null)
     ,[ani, setAni] =useState({
         randomNum:function(max,min=0){return Math.floor(Math.random()*(max-min))+min},
-        durationBasic:2500,
-        durationRandom:7000,
-        delayBasic:500,
+        durationBasic:8500,
+        durationRandom:3000,
+        delayBasic:1000,
         delayRandom:5000,
-        opacityBasic:55,
-        opacityRandom:10,
+        opacityBasic:30,
+        opacityRandom:70,
         linear:true,
     })
     ,storeA='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ@#&'
@@ -27,14 +28,14 @@ export default function MRain() {
         
             while(leng>-1){
                 const whichStore = lengFunc(100);
-                if(whichStore<32 && store2.length>0) res+=store2[randomNum(store2.length)]
+                if(whichStore<10 && store2.length>0) res+=store2[randomNum(store2.length)]
                 else if(store1.length>0) res+=store1[randomNum(store1.length)]
                 leng--
             }
             return res;
         }
 
-        function heavyRain(water=rainEle,num=47){
+        function heavyRain(water=rainEle,num=100){
             let i = 100
             const res = [];
             while(i>0){

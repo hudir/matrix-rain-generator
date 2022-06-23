@@ -61,11 +61,13 @@ export default function MRain() {
 
   
  return(
-    <div className="mRain">
+    <div className="mRain" >
         {rain && rain.map((x,i)=> (
             <p key={i} className={ani.linear ? "linear" : ''} style={
              {
-                animation:\`fall \${(ani.randomNum(ani.durationRandom)+ani.durationBasic) + 'ms'} \${(ani.randomNum(ani.delayRandom)+ ani.delayBasic) + 'ms'} infinite\`, opacity: \`\${(ani.randomNum(ani.opacityRandom) + ani.opacityBasic ) / 100 }\`
+                animation:\`fall \${(ani.randomNum(ani.durationRandom)+ani.durationBasic) + 'ms'} 
+                \${(ani.randomNum(ani.delayRandom)+ ani.delayBasic) + 'ms'} infinite\`, 
+                opacity: \`\${(ani.randomNum(ani.opacityRandom) + ani.opacityBasic ) / 100 }\`
               } 
         }>{x}</p>
        ))}

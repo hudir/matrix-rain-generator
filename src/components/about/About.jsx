@@ -22,7 +22,7 @@ export default function About() {
         <div className="card">Bootstrap</div>
         <div className="card">JavaScript</div>
         <div className="card">Vanilla JS</div>
-        <div className="card">React</div>
+        <div className="card">React Redux</div>
       </div>
 
       <div className="link">

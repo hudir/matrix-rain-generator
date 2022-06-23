@@ -107,11 +107,9 @@ export default function MRain() {
   @keyframes fall {
     0% {
         top: -200vh;
-        opacity: 1;
     }
     100% {
         top: calc(130vh);
-        opacity: 0.2;
     }
   }
   
